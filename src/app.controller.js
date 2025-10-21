@@ -15,10 +15,17 @@ var AppController = /** @class */ (function () {
     AppController.prototype.getHello = function () {
         return this.appService.getHello();
     };
+    AppController.prototype.test = function () {
+        return { layout: false };
+    };
     __decorate([
         (0, common_1.Get)(),
         (0, common_1.Render)("pages/home")
     ], AppController.prototype, "getHello", null);
+    __decorate([
+        (0, common_1.Get)('/test'),
+        (0, common_1.Render)("partials/htmx")
+    ], AppController.prototype, "test", null);
     AppController = __decorate([
         (0, common_1.Controller)()
     ], AppController);

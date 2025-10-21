@@ -10,4 +10,10 @@ export class AppController {
   getHello(): any {
     return this.appService.getHello();
   }
+  
+  @Get('/test')
+  @Render("partials/htmx")
+  test(){
+    return {layout: false}
+  }
 }
